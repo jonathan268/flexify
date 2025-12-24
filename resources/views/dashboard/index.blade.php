@@ -10,27 +10,27 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4 p-2">
-                        <h1 class="h3 mb-0 text-gray-800">Tableau de bord</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+                    <div class="p-2 mb-4 d-sm-flex align-items-center justify-content-between">
+                        <h1 class="mb-0 text-gray-800 h3">Tableau de bord</h1>
+                        <a href="#" class="shadow-sm d-none d-sm-inline-block btn btn-sm btn-success"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Générer un rapport</a>
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row py-2">
+                    <div class="py-2 row">
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="mb-4 col-xl-3 col-md-6">
+                            <div class="py-2 shadow card border-left-primary h-100">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="mr-2 col">
+                                            <div class="mb-1 text-xs font-weight-bold text-primary text-uppercase">
                                                 Total Employers</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">150</div>
+                                            <div class="mb-0 text-gray-800 h5 font-weight-bold">150</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                                            <i class="text-gray-300 fas fa-users fa-2x"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -38,17 +38,17 @@
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                        <div class="mb-4 col-xl-3 col-md-6">
+                            <div class="py-2 shadow card border-left-success h-100">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        <div class="mr-2 col">
+                                            <div class="mb-1 text-xs font-weight-bold text-success text-uppercase">
                                                 Total Départements</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">30</div>
+                                            <div class="mb-0 text-gray-800 h5 font-weight-bold">30</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-school fa-2x text-gray-300"></i>
+                                            <i class="text-gray-300 fas fa-school fa-2x"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -56,17 +56,17 @@
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                        <div class="mb-4 col-xl-3 col-md-6">
+                            <div class="py-2 shadow card border-left-info h-100">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Masse salariale
+                                        <div class="mr-2 col">
+                                            <div class="mb-1 text-xs font-weight-bold text-info text-uppercase">Masse salariale
                                             </div>
-                                             <div class="h5 mb-0 font-weight-bold text-gray-800">45</div>
+                                             <div class="mb-0 text-gray-800 h5 font-weight-bold">45</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-money-bill fa-2x text-gray-300"></i>
+                                            <i class="text-gray-300 fas fa-money-bill fa-2x"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -74,17 +74,17 @@
                         </div>
 
                         <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="mb-4 col-xl-3 col-md-6">
+                            <div class="py-2 shadow card border-left-warning h-100">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                        <div class="mr-2 col">
+                                            <div class="mb-1 text-xs font-weight-bold text-warning text-uppercase">
                                                 Dernières fiches générées</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="mb-0 text-gray-800 h5 font-weight-bold">18</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            <i class="text-gray-300 fas fa-clipboard-list fa-2x"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -98,17 +98,17 @@
 
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
+                            <div class="mb-4 shadow card">
                                 <!-- Card Header - Dropdown -->
                                 <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    class="flex-row py-3 card-header d-flex align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            <i class="text-gray-400 fas fa-ellipsis-v fa-sm fa-fw"></i>
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                        <div class="shadow dropdown-menu dropdown-menu-right animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Dropdown Header:</div>
                                             <a class="dropdown-item" href="#">Action</a>
@@ -129,17 +129,17 @@
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
+                            <div class="mb-4 shadow card">
                                 <!-- Card Header - Dropdown -->
                                 <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    class="flex-row py-3 card-header d-flex align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            <i class="text-gray-400 fas fa-ellipsis-v fa-sm fa-fw"></i>
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                        <div class="shadow dropdown-menu dropdown-menu-right animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Dropdown Header:</div>
                                             <a class="dropdown-item" href="#">Action</a>
@@ -151,7 +151,7 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
+                                    <div class="pt-4 pb-2 chart-pie">
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
