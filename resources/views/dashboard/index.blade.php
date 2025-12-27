@@ -45,7 +45,7 @@
                                         <div class="mr-2 col">
                                             <div class="mb-1 text-xs font-weight-bold text-success text-uppercase">
                                                 Total Départements</div>
-                                            <div class="mb-0 text-gray-800 h5 font-weight-bold">30</div>
+                                            <div class="mb-0 text-gray-800 h5 font-weight-bold"></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="text-gray-300 fas fa-school fa-2x"></i>

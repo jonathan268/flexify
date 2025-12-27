@@ -13,7 +13,7 @@
                     <!-- DataTales Example -->
                     <div class="mb-4 shadow card">
                         <div class="py-3 card-header">
-                            <h6 class="m-0 font-weight-bold text-primary">Détails </h6>
+                            <a href="{{ route('departements.create') }}"><button class="btn btn-success">Nouveau département</button></a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -22,35 +22,22 @@
                                         <tr>
                                             <th>Id</th>
                                             <th>Nom</th>
-                                            <th>Description</th>
-                                            <th>Date de création</th>
-                                            <th>mise à jour</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($departements as $departement )
+
                                         <tr>
-                                            <td>1</td>
-                                            <td>Colleen Hurst</td>
-                                            <td>Javascript Developer</td>
-                                            <td>San Francisco</td>
-                                            <td>39</td>
+                                            <td>{{ $departement->id }}</td>
+                                            <td>{{ $departement->name }}</td>
                                              <td>
-                                                <button class="p-1 mx-2 mb-2 btn btn-success"><i class="fa fa-edit"></i></button>
-                                                <button class="p-1 mx-2 mb-2 btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                <a href="{{ route('departements.edit', $departement->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-edit"></i></button></a>
+                                                <a href="{{ route('departements.destroy', $departement->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-trash"></i></button></a>
+                                                <a href="{{ route('departements.show', $departement->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-eye"></i></button></a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                             <td>2</td>
-                                            <td>Donna Snider</td>
-                                            <td>Customer Support</td>
-                                            <td>New York</td>
-                                            <td>27</td>
-                                             <td>
-                                                <button class="p-1 mx-2 mb-2 btn btn-success"><i class="fa fa-edit"></i></button>
-                                                <button class="p-1 mx-2 mb-2 btn btn-danger"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
+                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>

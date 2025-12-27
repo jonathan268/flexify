@@ -9,4 +9,11 @@ class Departement extends Model
     public function employers(){
         return $this->hasMany(Employer::class);
     }
+
+    protected $fillable = [
+        'name',
+        'description',
+    ];
+
+
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employer;
 use Illuminate\Http\Request;
 
 class EmployerController extends Controller
@@ -11,7 +12,8 @@ class EmployerController extends Controller
      */
     public function index()
     {
-        return view('employers.index');
+        $employers = Employer::all();
+        return view('employers.index', compact('employers'));
     }
 
     /**
@@ -19,7 +21,7 @@ class EmployerController extends Controller
      */
     public function create()
     {
-        //
+        return view('employers.create');
     }
 
     /**
@@ -43,7 +45,7 @@ class EmployerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
     }
 
     /**

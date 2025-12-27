@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('company_phone')->nullable();
             $table->text('company_address')->nullable();
             $table->string('company_logo')->nullable();
-            $table->string('currency')->default('FCFA').
+            $table->string('currency')->default('FCFA');
             $table->integer('daily_default_rate')->default(0);
             $table->integer('working_days')->default(30);
             $table->text('pdf_footer')->nullable();
