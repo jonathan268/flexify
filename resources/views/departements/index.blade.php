@@ -32,9 +32,16 @@
                                             <td>{{ $departement->id }}</td>
                                             <td>{{ $departement->name }}</td>
                                              <td>
-                                                <a href="{{ route('departements.edit', $departement->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-edit"></i></button></a>
-                                                <a href="{{ route('departements.destroy', $departement->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-trash"></i></button></a>
-                                                <a href="{{ route('departements.show', $departement->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-eye"></i></button></a>
+                                                <a href="{{ route('departements.edit', $departement->id) }}"><button class="mb-2 btn"><i class="fa fa-edit"></i></button></a>
+                                                <form action="{{ route('departements.destroy', $departement->id) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <button type="submit" class="mb-2 btn"><i class="fa fa-trash"></i></button>
+
+
+                                                </form>
+                                                <a href="{{ route('departements.show', $departement->id) }}"><button class="mb-2 btn"><i class="fa fa-eye"></i></button></a>
                                             </td>
                                         </tr>
                                          @endforeach

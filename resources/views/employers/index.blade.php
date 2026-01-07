@@ -37,9 +37,9 @@
                                             <td>{{ $employer->prenom }}</td>
                                             <td>{{ $employer->departement_id }}</td>
                                             <td>
-                                                <a href="{{ route('departements.edit') }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-edit"></i></button></a>
-                                                <a href="{{ route('departements.destroy') }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-trash"></i></button></a>
-                                                <a href="{{ route('departements.show') }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-eye"></i></button></a>
+                                                <a href="{{ route('employers.edit', $employer->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-edit"></i></button></a>
+                                                <a href="{{ route('employers.destroy', $employer->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-trash"></i></button></a>
+                                                <a href="{{ route('employers.show', $employer->id) }}"><button class="p-1 mx-2 mb-2 btn"><i class="fa fa-eye"></i></button></a>
                                             </td>
                                         </tr>
                                          @endforeach

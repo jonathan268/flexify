@@ -17,6 +17,14 @@ class DepartementController extends Controller
         return view('departements.index', compact('departements'));
     }
 
+    public function count(){
+
+         $totaldepartement = Departement::count();
+          return view('dashboard.index', compact('totaldepartement'));
+
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -52,7 +60,9 @@ class DepartementController extends Controller
      */
     public function show(string $id)
     {
-        //
+         $departement = Departement::find($id);
+        return view('departements.show', compact('departement'));
+
     }
 
     /**
@@ -69,7 +79,17 @@ class DepartementController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+
+        ]);
+
+        $departement = Departement::find($id);
+        $departement->update($request->all());
+        return redirect()->route('departements.index')->with('success', 'Département modifié avec succès');
+
+
     }
 
     /**
@@ -77,6 +97,8 @@ class DepartementController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $departement = Departement::find($id);
+        $departement->delete();
+        return redirect()->route('departements.index')->with('success', 'Département supprimé avec succès');
     }
 }

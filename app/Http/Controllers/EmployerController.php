@@ -16,6 +16,14 @@ class EmployerController extends Controller
         return view('employers.index', compact('employers'));
     }
 
+     public function count(){
+
+         $totalemployer = Employer::count();
+          return view('dashboard.index', compact('totalemployer'));
+
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -29,7 +37,29 @@ class EmployerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nom'=> 'required|string|max:255',
+            'prenom'=> 'required|string|max:255',
+            'email'=> 'required|unique:email',
+            'phone'=> 'required|numeric',
+            'departement_id'=> 'required',
+            'hire_date'=> 'required|date',
+            'daily_rate'=> 'required|numeric',
+        ]);
+
+        Employer::created([
+            'nom'=>$request->nom,
+            'prenom'=>$request->prenom,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'departement_id'=>$request->departement_id,
+            'hire_date'=>$request->hire_date,
+            'daily_date'=>$request->daily_rate,
+        ]);
+
+        return redirect()->route('employers.index')->with('success', 'Employé ajouté avec succès');
+
+
     }
 
     /**
@@ -37,7 +67,8 @@ class EmployerController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $employer = Employer::find($id);
+        return view('employers.show', compact('employer'));
     }
 
     /**
@@ -45,7 +76,9 @@ class EmployerController extends Controller
      */
     public function edit(string $id)
     {
-        
+        $employer = Employer::find($id);
+        return view('employers.edit', compact('employer'));
+
     }
 
     /**
@@ -53,7 +86,22 @@ class EmployerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'nom'=> 'required|string|max:255',
+            'prenom'=> 'required|string|max:255',
+            'email'=> 'required|unique:email',
+            'phone'=> 'required|numeric',
+            'departement_id'=> 'required',
+            'hire_date'=> 'required|date',
+            'daily_rate'=> 'required|numeric',
+        ]);
+
+        $employer = Employer::find($id);
+        $employer->update($request->all());
+        return redirect()->route('employers.index')->with('success', 'Employé modifié avec succès');
+
+
+
     }
 
     /**
@@ -61,6 +109,8 @@ class EmployerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $employer = Employer::find($id);
+        $employer->delete();
+        return redirect()->route('employers.index')->with('success', 'Employé supprimé avec succès' );
     }
 }

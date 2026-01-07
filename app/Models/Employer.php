@@ -13,4 +13,14 @@ class Employer extends Model
     public function salaires(){
         return $this->hasMany(Salaire::class);
     }
+
+    protected $fillable = [
+        'nom',
+        'prenom',
+        'email',
+        'phone',
+        'departement_id',
+        'hire_date',
+        'daily_rate',
+    ];
 }

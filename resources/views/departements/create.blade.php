@@ -3,7 +3,7 @@
 @section('title', 'Ajout département')
 
 @section('content')
-    <div class="py-4 col-md-4">
+    <div class="py-4 col-md-6">
             <div class="p-5 py-4 bg-white rounded-lg shadow">
                 <form action="{{ route('departements.store') }}" method="post">
 

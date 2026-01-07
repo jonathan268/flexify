@@ -5,9 +5,10 @@
 @section('content')
 <div class="py-4 col-md-4">
             <div class="p-5 py-4 bg-white rounded-lg shadow">
-                <form action="{{ route('departements.store') }}" method="post">
+                <form action="{{ route('departements.update', $departement->id) }}" method="post">
 
                 @csrf
+                @method('PUT')
 
                 <h4 class="text-bold text-primary"> Modifié un département</h4><br>
 
